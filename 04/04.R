@@ -23,7 +23,7 @@ var(身長)
 
 ## =====================================
 
-# サイコロの出る目に関する度数分布
+## サイコロの出る目に関する度数分布
 
 set.seed(1) # シードを1に設定
 サイコロ6回振る <- ceiling(runif(n = 6, min = 0, max = 6))
@@ -32,8 +32,23 @@ table(サイコロ6回振る)
 サイコロ600万回振る <- ceiling(runif(n = 6000000, min = 0, max = 6))
 table(サイコロ600万回振る)
 
-# 性別の母集団分布
+## 性別の母集団分布
 
 # 性別の母集団分布のグラフを作成する
 barplot(c(2 / 3, 1 / 3), names.arg = c("男性", "女性")) 
 
+## 正規分布
+
+curve(dnorm(x, mean = 0, sd = 1), from = -4, to = 4)
+curve(dnorm(x, mean = 1, sd = 1), add = TRUE)
+curve(dnorm(x, mean = 0, sd = 2), add = TRUE)
+
+## 正規母集団から単純無作為抽出を行う
+
+# 平均50、標準偏差10の正規母集団からn=5の標本を無作為に抽出する
+rnorm(n = 5, mean = 50, sd = 10)
+標本 <- rnorm(n = 5, mean = 50, sd = 10)
+hist(標本)
+
+大標本 <- rnorm(n = 10000, mean = 50, sd = 10)
+hist(大標本)
