@@ -1,3 +1,9 @@
 #Friendly-statistics-by-R gitignore
 
 README.html
+
+# Ignore the files of TeX relationship.
+*.aux
+*.dvi
+*.log
+*.pdf
