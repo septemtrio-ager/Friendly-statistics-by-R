@@ -1,0 +1,25 @@
+\documentclass{jarticle}
+\begin{document}
+
+\title{第4章メモ}
+\maketitle
+
+\section{練習問題}
+\subsection{問題2}
+平均${\mu}$，分散${\sigma}^2$の正規分布
+\[
+ N(\mu, \sigma^2)
+\]
+にしたがう母集団からサンプルサイズnの標本を
+抽出した時、その標本平均の分布は
+\[
+ N \left(\mu, \frac{\sigma^2}{n} \right)
+\]
+ここで標準偏差は$sd=\sqrt{\sigma^2}$であるから、
+標本抽出した分布をR言語を用いて
+グラフを表示させるとすると、
+\[
+ > curve(dnorm(x, mean=\mu, sd=sqrt(\sigma^2/n)))
+ \]
+で表示させることができる。
+\end{document}
